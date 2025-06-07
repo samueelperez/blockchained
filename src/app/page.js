@@ -74,8 +74,8 @@ export default function HomePage() {
         </div>
         {/* Crypto Ticker dentro del hero, pegado abajo */}
         <div className="relative z-10">
-          <div className="py-6 bg-gray-900/50">
-            <div className="container mx-auto">
+          <div className="py-4 sm:py-6 bg-gray-900/50">
+            <div className="container mx-auto px-2 sm:px-4">
               <div className="flex overflow-x-auto scrollbar-hide">
                 {loading ? (
                   <div className="flex items-center justify-center w-full">
@@ -86,9 +86,9 @@ export default function HomePage() {
                 ) : (
                   <div className="flex animate-marquee whitespace-nowrap">
                     {[...cryptoData, ...cryptoData].map((crypto, index) => (
-                      <div key={index} className="flex items-center mx-6">
-                        <span className="font-bold mr-2">{crypto.symbol}</span>
-                        <span className="mr-2">${crypto.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                      <div key={index} className="flex items-center mx-3 sm:mx-6 text-sm sm:text-base">
+                        <span className="font-bold mr-1 sm:mr-2">{crypto.symbol}</span>
+                        <span className="mr-1 sm:mr-2">${crypto.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                         <span className={`${crypto.change24h >= 0 ? 'text-green-500' : 'text-red-500'}`}>
                           {crypto.change24h >= 0 ? '+' : ''}{crypto.change24h.toFixed(2)}%
                         </span>
@@ -109,8 +109,8 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {/* Beginner Path */}
-            <div className="crypto-card hover:translate-y-[-5px]">
-              <h3 className="text-2xl font-bold mb-4">Beginner</h3>
+            <div className="crypto-card hover:translate-y-[-5px] p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Beginner</h3>
               <p className="text-gray-300 mb-6">
                 Start your trading journey with fundamental concepts, basic chart analysis, and risk management principles.
               </p>
@@ -140,8 +140,8 @@ export default function HomePage() {
             </div>
             
             {/* Intermediate Path */}
-            <div className="crypto-card hover:translate-y-[-5px]">
-              <h3 className="text-2xl font-bold mb-4">Intermediate</h3>
+            <div className="crypto-card hover:translate-y-[-5px] p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Intermediate</h3>
               <p className="text-gray-300 mb-6">
                 Advance your skills with technical analysis, trading strategies, and market psychology.
               </p>
@@ -171,8 +171,8 @@ export default function HomePage() {
             </div>
             
             {/* Expert Path */}
-            <div className="crypto-card hover:translate-y-[-5px]">
-              <h3 className="text-2xl font-bold mb-4">Expert</h3>
+            <div className="crypto-card hover:translate-y-[-5px] p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Expert</h3>
               <p className="text-gray-300 mb-6">
                 Master advanced trading techniques, algorithmic strategies, and portfolio optimization.
               </p>
@@ -212,13 +212,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Resource Card 1 */}
             <div className="card hover:translate-y-[-5px]">
-              <div className="p-6">
-                <div className="flex items-center justify-center h-48 mb-4 bg-gray-800 rounded-lg">
+              <div className="p-4 sm:p-6">
+                <div className="flex items-center justify-center h-32 sm:h-48 mb-4 bg-gray-800 rounded-lg">
                   <svg className="w-16 h-16 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Introduction to Technical Analysis</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Introduction to Technical Analysis</h3>
                 <p className="text-gray-300 mb-4">Learn the basics of chart patterns, indicators, and how to apply them in your trading decisions.</p>
                 <Link href="/resources#beginner" className="text-pink-400 hover:text-pink-300 inline-flex items-center">
                   Watch Video
@@ -231,13 +231,13 @@ export default function HomePage() {
             
             {/* Resource Card 2 */}
             <div className="card hover:translate-y-[-5px]">
-              <div className="p-6">
-                <div className="flex items-center justify-center h-48 mb-4 bg-gray-800 rounded-lg">
-                  <svg className="w-16 h-16 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <div className="p-4 sm:p-6">
+                <div className="flex items-center justify-center h-32 sm:h-48 mb-4 bg-gray-800 rounded-lg">
+                  <svg className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Risk Management Guide</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Risk Management Guide</h3>
                 <p className="text-gray-300 mb-4">Essential strategies to protect your capital and maximize your trading performance.</p>
                 <Link href="/resources#beginner" className="text-purple-400 hover:text-purple-300 inline-flex items-center">
                   Read Guide
@@ -250,13 +250,13 @@ export default function HomePage() {
             
             {/* Resource Card 3 */}
             <div className="card hover:translate-y-[-5px]">
-              <div className="p-6">
-                <div className="flex items-center justify-center h-48 mb-4 bg-gray-800 rounded-lg">
-                  <svg className="w-16 h-16 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <div className="p-4 sm:p-6">
+                <div className="flex items-center justify-center h-32 sm:h-48 mb-4 bg-gray-800 rounded-lg">
+                  <svg className="w-12 h-12 sm:w-16 sm:h-16 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Trading Strategy Templates</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Trading Strategy Templates</h3>
                 <p className="text-gray-300 mb-4">Download ready-to-use trading strategy templates to jumpstart your trading journey.</p>
                 <Link href="/resources#expert" className="text-indigo-400 hover:text-indigo-300 inline-flex items-center">
                   Download Templates
