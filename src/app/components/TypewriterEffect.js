@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function TypewriterEffect({ words, typingSpeed = 150, deletingSpeed = 100, pauseTime = 2000 }) {
+const TypewriterEffect = ({ words, typingSpeed = 150, deletingSpeed = 100, pauseTime = 2000 }) => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
@@ -38,4 +38,6 @@ export default function TypewriterEffect({ words, typingSpeed = 150, deletingSpe
   }, [text, isDeleting, wordIndex, isWaiting, words, typingSpeed, deletingSpeed, pauseTime]);
   
   return <span>{text}</span>;
-}
+};
+
+export default TypewriterEffect;

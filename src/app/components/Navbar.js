@@ -80,7 +80,7 @@ export default function Navbar() {
             ) : (
               <Link 
                 href="/login" 
-                className="btn btn-sm btn-outline"
+                className="py-2 px-6 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white rounded-full transition-all transform hover:scale-105 shadow-md"
               >
                 Login
               </Link>
@@ -144,7 +144,7 @@ export default function Navbar() {
             ) : (
               <Link 
                 href="/login" 
-                className="block py-2 px-4 mt-2 border border-gray-600 text-gray-300 hover:text-white rounded-md transition-colors"
+                className="block py-2 px-4 mt-2 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white rounded-md transition-all transform hover:scale-105 shadow-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Login
