@@ -269,7 +269,6 @@ export default function TechnicalCharts({ symbol, timeframe }) {
           // Dibujar líneas de referencia para RSI (30 y 70)
           const ctx = chart.ctx;
           const yAxis = chart.scales.y;
-          const canvas = chart.canvas;
           
           ctx.save();
           ctx.beginPath();

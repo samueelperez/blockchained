@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import MouseTrailWrapper from './components/MouseTrailWrapper';
-import Image from 'next/image';
 import PageLayout from './page-layout';
 
 export default function HomePage() {
