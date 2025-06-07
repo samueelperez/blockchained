@@ -9,7 +9,6 @@ export default function TypewriterEffect({
   pauseTime = 1500 
 }) {
   const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -47,7 +46,6 @@ export default function TypewriterEffect({
         // When fully deleted, move to next word
         setIsDeleting(false);
         setCurrentWordIndex((prev) => (prev + 1) % words.length);
-        setCurrentIndex(0);
       } else {
         // Delete one character
         timeoutRef.current = setTimeout(() => {
@@ -73,7 +71,7 @@ export default function TypewriterEffect({
     if (words.length > 0 && displayText === '') {
       setDisplayText(words[0].charAt(0));
     }
-  }, [words]);
+  }, [words, displayText]);
   
   return <span>{displayText}</span>;
 }
