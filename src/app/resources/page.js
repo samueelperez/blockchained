@@ -1,15 +1,9 @@
 "use client";
 
-import { useState, Suspense } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import MouseTrailWrapper from '../components/MouseTrailWrapper';
-
-// Dynamically import the TypewriterEffect component with no SSR
-const TypewriterEffect = dynamic(() => import('../components/TypewriterEffect'), {
-  ssr: false,
-  loading: () => <span>TRADING</span>
-});
+import TypewriterEffect from '../components/TypewriterEffect';
 
 export default function ResourcesPage() {
   const [activeTab, setActiveTab] = useState('all');
