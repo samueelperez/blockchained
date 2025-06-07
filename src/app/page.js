@@ -45,7 +45,7 @@ export default function HomePage() {
 
   return (
     <PageLayout>
-      <div className="min-h-screen bg-elegant">
+      <div className="min-h-screen bg-elegant overflow-hidden">
       <MouseTrailWrapper />
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-between relative overflow-hidden">
