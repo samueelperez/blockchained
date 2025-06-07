@@ -56,16 +56,16 @@ export default function HomePage() {
         
         <div className="container mx-auto relative z-10 pt-32">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
               BLOCKCHAINED <span className="gradient-text">SNIPERS</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 md:mb-8">
               Enhance your trading skills with comprehensive educational resources, expert strategies, and market analysis tools.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
                 href="/resources" 
-                className="text-lg px-8 py-4 rounded-full transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
               >
                 Trading Resources
               </Link>
@@ -103,11 +103,11 @@ export default function HomePage() {
       </section>
 
       {/* Learning Paths Section */}
-      <section className="py-20 bg-gray-900/50">
+      <section className="py-12 md:py-20 bg-gray-900/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">Learning Paths</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">Learning Paths</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {/* Beginner Path */}
             <div className="crypto-card hover:translate-y-[-5px]">
               <h3 className="text-2xl font-bold mb-4">Beginner</h3>
@@ -205,11 +205,11 @@ export default function HomePage() {
       </section>
       
       {/* Latest Resources Section */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">Latest Resources</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">Latest Resources</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Resource Card 1 */}
             <div className="card hover:translate-y-[-5px]">
               <div className="p-6">
