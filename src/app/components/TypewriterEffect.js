@@ -8,7 +8,7 @@ export default function TypewriterEffect({
   deletingSpeed = 80, 
   pauseTime = 1500 
 }) {
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState(words[0] ? words[0][0] || '' : '');
   const [isDeleting, setIsDeleting] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
   const [isWaiting, setIsWaiting] = useState(false);
