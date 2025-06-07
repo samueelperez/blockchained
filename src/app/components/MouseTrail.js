@@ -187,6 +187,7 @@ export default function MouseTrail() {
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-50"
       style={{ pointerEvents: 'none', background: 'transparent' }}
+      aria-hidden="true"
     />
   );
 }
