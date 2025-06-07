@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import MouseTrailWrapper from '../components/MouseTrailWrapper';
+import MouseTrailHero from '../components/MouseTrailHero';
 import TypewriterEffect from '../components/TypewriterEffect';
 
 export default function ResourcesPage() {
@@ -18,7 +18,7 @@ export default function ResourcesPage() {
 
   return (
     <div className="min-h-screen bg-gray-950 snap-y snap-mandatory h-screen overflow-y-scroll">
-      <MouseTrailWrapper />
+      <MouseTrailHero />
       
       {/* Hero Section */}
       <section className="min-h-screen pt-20 md:pt-32 pb-16 relative overflow-hidden snap-start flex flex-col justify-center">
