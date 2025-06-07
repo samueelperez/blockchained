@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth';
 import LoginForm from '../components/LoginForm';
@@ -8,6 +8,7 @@ import LoginForm from '../components/LoginForm';
 export default function LoginPage() {
   const { user, isLoading } = useAuth();
   const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
 
   // Redirect if already logged in
   useEffect(() => {
@@ -15,6 +16,24 @@ export default function LoginPage() {
       router.push('/');
     }
   }, [user, isLoading, router]);
+
+  // Handle potential errors from Supabase initialization
+  useEffect(() => {
+    const handleAuthError = () => {
+      if (typeof window !== 'undefined') {
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorParam = urlParams.get('error');
+        const errorDescription = urlParams.get('error_description');
+        
+        if (errorParam) {
+          setError(errorDescription || 'Authentication error occurred');
+          console.error('Auth error from URL:', errorParam, errorDescription);
+        }
+      }
+    };
+    
+    handleAuthError();
+  }, []);
 
   if (isLoading) {
     return (
@@ -51,6 +70,12 @@ export default function LoginPage() {
             Sign in to access premium trading resources and personalized features
           </p>
         </div>
+        
+        {error && (
+          <div className="bg-red-500/10 border border-red-500/30 text-red-300 px-4 py-3 rounded-md mb-6 text-sm">
+            {error}
+          </div>
+        )}
         
         <LoginForm />
         

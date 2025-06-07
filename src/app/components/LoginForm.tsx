@@ -28,14 +28,22 @@ export default function LoginForm() {
       }
 
       if (result.error) {
-        setError(result.error.message);
+        console.error('Auth error:', result.error);
+        if (result.error.message.includes('Invalid login credentials')) {
+          setError('Invalid email or password. Please try again.');
+        } else if (result.error.message.includes('Email not confirmed')) {
+          setError('Please check your email to confirm your account before logging in.');
+        } else {
+          setError(result.error.message || 'Authentication failed. Please try again.');
+        }
       } else {
+        console.log('Login successful, redirecting...');
         // Redirect to home page after successful login/signup
         router.push('/');
       }
     } catch (err) {
-      setError('An unexpected error occurred');
-      console.error(err);
+      console.error('Unexpected error during authentication:', err);
+      setError('An unexpected error occurred. Please try again later.');
     } finally {
       setLoading(false);
     }

@@ -29,16 +29,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Get session from storage
     const getSession = async () => {
-      setIsLoading(true);
-      const { data: { session }, error } = await supabase.auth.getSession();
-      
-      if (error) {
-        console.error('Error getting session:', error);
+      try {
+        setIsLoading(true);
+        const { data: { session }, error } = await supabase.auth.getSession();
+        
+        if (error) {
+          console.error('Error getting session:', error);
+        }
+        
+        setSession(session);
+        setUser(session?.user ?? null);
+      } catch (err) {
+        console.error('Failed to get session:', err);
+      } finally {
+        setIsLoading(false);
       }
-      
-      setSession(session);
-      setUser(session?.user ?? null);
-      setIsLoading(false);
     };
 
     getSession();
