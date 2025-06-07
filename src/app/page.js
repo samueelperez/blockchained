@@ -54,7 +54,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.2),transparent_40%)]"></div>
         </div>
         
-        <div className="container mx-auto relative z-10 pt-32">
+        <div className="container mx-auto px-6 relative z-10 pt-32">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
               BLOCKCHAINED <span className="gradient-text">SNIPERS</span>
@@ -75,7 +75,7 @@ export default function HomePage() {
         {/* Crypto Ticker dentro del hero, pegado abajo */}
         <div className="relative z-10">
           <div className="py-4 sm:py-6 bg-gray-900/50">
-            <div className="container mx-auto px-2 sm:px-4">
+            <div className="container mx-auto px-6">
               <div className="flex overflow-x-auto scrollbar-hide">
                 {loading ? (
                   <div className="flex items-center justify-center w-full">
@@ -104,7 +104,7 @@ export default function HomePage() {
 
       {/* Learning Paths Section */}
       <section className="py-12 md:py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">Learning Paths</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -206,7 +206,7 @@ export default function HomePage() {
       
       {/* Latest Resources Section */}
       <section className="py-12 md:py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">Latest Resources</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
