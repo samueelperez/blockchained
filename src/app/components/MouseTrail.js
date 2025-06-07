@@ -12,6 +12,9 @@ export default function MouseTrail() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Clear any existing particles when component mounts
+    particlesRef.current = [];
+    
     const ctx = canvas.getContext('2d');
     
     // Configuración - Colores de nebulosa espacial que coinciden con la nueva paleta
