@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import MouseTrailWrapper from './components/MouseTrailWrapper';
 import PageLayout from './page-layout';
 
