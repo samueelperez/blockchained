@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import MouseTrailWrapper from './components/MouseTrailWrapper';
 import PageLayout from './page-layout';
 
@@ -52,6 +53,18 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 to-black/80"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.2),transparent_40%)]"></div>
+        </div>
+        
+        {/* Featured Image - Bottom Right */}
+        <div className="absolute bottom-20 right-0 z-10 w-64 md:w-80 lg:w-96 xl:w-[500px] pointer-events-none">
+          <Image 
+            src="/img/home.png" 
+            alt="Featured Image" 
+            width={500} 
+            height={500}
+            className="object-contain"
+            priority
+          />
         </div>
         
         <div className="container mx-auto px-6 relative z-10 pt-32">
