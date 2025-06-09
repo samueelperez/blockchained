@@ -57,13 +57,10 @@ export default function HomePage() {
         
         {/* Featured Image - Bottom Right */}
         <div className="absolute bottom-20 right-0 z-10 w-64 md:w-80 lg:w-96 xl:w-[500px] pointer-events-none">
-          <Image 
-            src="/img/home.png" 
+          <img 
+            src="/home.png" 
             alt="Featured Image" 
-            width={500} 
-            height={500}
-            className="object-contain"
-            priority
+            className="w-full h-auto object-contain"
           />
         </div>
         
